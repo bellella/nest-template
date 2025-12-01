@@ -14,7 +14,7 @@ model User {
   email                     String   @unique
   
   password                  String?  
-  provider                  String   @default("local") // 계정 제공자: 'google', 'apple', 'local'
+  provider                  String   @default("local")
   providerId                String?
   refreshTokenHash          String?  @db.Text 
 

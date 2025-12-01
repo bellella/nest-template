@@ -20,7 +20,7 @@ const config: runtime.GetPrismaClientConfig = {
   "clientVersion": "7.0.1",
   "engineVersion": "f09f2815f091dbba658cdcd2264306d88bb5bda6",
   "activeProvider": "postgresql",
-  "inlineSchema": "generator client {\n  provider     = \"prisma-client\"\n  output       = \"../src/generated/prisma\"\n  moduleFormat = \"cjs\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\nmodel User {\n  id    Int    @id @default(autoincrement())\n  email String @unique\n\n  password         String?\n  provider         String  @default(\"local\") // 계정 제공자: 'google', 'apple', 'local'\n  providerId       String?\n  refreshTokenHash String? @db.Text\n\n  firstName String?\n  lastName  String?\n\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n",
+  "inlineSchema": "generator client {\n  provider     = \"prisma-client\"\n  output       = \"../src/generated/prisma\"\n  moduleFormat = \"cjs\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\nmodel User {\n  id    Int    @id @default(autoincrement())\n  email String @unique\n\n  password         String?\n  provider         String  @default(\"local\")\n  providerId       String?\n  refreshTokenHash String? @db.Text\n\n  firstName String?\n  lastName  String?\n\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n",
   "runtimeDataModel": {
     "models": {},
     "enums": {},

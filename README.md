@@ -2,7 +2,7 @@
 
 ### CORE STACK (Specs)
 
-- Framework: **NestJS v10.x**
+- Framework: **NestJS v11.x**
 - ORM: **Prisma v7.x**
 - Database: **PostgreSQL**
 - API Documentation: **Swagger**
@@ -30,12 +30,12 @@ To run the project, create a **.env** file and define these required keys:
 
 ### MODULE FEATURES
 
-- **auth**: ID/Password-based Login & Register, Google/Apple social Login & Register. Authentication tokens (JWTs) are managed exclusively via **HTTP-Only Cookies**. (Note: If session management is changed to exclude token generation, "JWT" must be removed from the description.)
-- **file**: 3MB image cloud (S3 etc.) upload.
-- **user**: User information Create, Read, Update, Delete (CRUD).
+- **auth**: ID/Password-based Login & Register, Google/Apple social Login & Register.
+- **file**: Aws S3 file upload.
+- **user**: User table CRUD.
 - **health**: Application status check endpoint.
-- **mail**: Transaction-based email sending functionality.
-- **prisma**: Prisma Client connection and DB adapter management.
+- **mail**: Email sending functionality.
+- **prisma**: Prisma Client connection and DB adapter management(Postgre).
 
 ### METHOD NAMING CONVENTION
 
